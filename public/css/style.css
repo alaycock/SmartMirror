@@ -1,0 +1,68 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	background-color: #000;
+	color: #FFF;
+}
+
+.top {
+	position: absolute;
+	top: 0px;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Datetime */ 
+#datetime {
+	margin-right: 10px;
+	margin-top: 10px;
+	right: 0px;
+}
+
+#time {
+	font-size: 100pt;
+	float:left;
+	line-height:80%;
+}
+
+#period {
+	font-size: 50pt;
+	line-height:80%;
+}
+
+#dateContainer {
+	float:left;
+	width: 100px;
+}
+
+#date {
+	line-height:90%;
+	font-size: 12pt;
+}
+
+#year {
+	line-height:90%;
+	font-size: 30pt;
+}
+
+/* Weather */
+#weather {
+	left: 0px;
+}
+
+#today i {
+	font-size: 100px;
+}
+
+
+/* News */
+#news {
+	margin-left: auto;
+	margin-right: auto;
+}

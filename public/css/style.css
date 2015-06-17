@@ -18,6 +18,10 @@ body {
 	display: none;
 }
 
+.clear {
+	clear: both;
+}
+
 /* Datetime */ 
 #datetime {
 	margin-right: 10px;
@@ -54,12 +58,84 @@ body {
 /* Weather */
 #weather {
 	left: 0px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#today {
+	width: 350px;
 }
 
 #today i {
 	font-size: 100px;
+	float: left;
+	width: 120px;
 }
 
+#today .now {
+	float: left;
+	font-size: 100px;
+	line-height: 75%;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+#today .now sup{
+	font-size: 40px;
+	vertical-align: top;
+	line-height: 80%;
+	font-weight: 500;
+}
+
+#today .high {
+	margin-right: 10px;
+}
+
+#today .low {
+	margin-left: 10px;
+}
+
+#today > * {
+	display: inline-block;
+}
+
+#today .todayIcon {
+	width: 140px;
+	float: left;
+}
+
+#today .temps .hilo {
+	margin-left: 30px;
+	margin-top: 7px;
+	display: inline-block;
+}
+
+#forecast {
+	width: 500px;
+	margin-top: 15px;
+}
+
+#forecast > #forecastItem {
+	display: inline-block;
+	width: 80px;
+}
+
+#forecast > #forecastItem i {
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+}
+
+#forecast > #forecastItem .temps {
+	text-align: center;
+	margin-top: 15px;
+}
+
+#forecast > #forecastItem .day {
+	text-align: center;
+	margin-top: 5px;
+}
 
 /* News */
 #news {

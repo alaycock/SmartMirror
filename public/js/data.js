@@ -42,11 +42,11 @@ var codeIcon = [
 	"wi-cloudy", // 26  cloudy
 	"wi-night-cloudy", // 27  mostly cloudy (night)
 	"wi-day-cloudy", // 28  mostly cloudy (day)
-	"night-partly-cloudy", // 29  partly cloudy (night)
+	"wi-night-partly-cloudy", // 29  partly cloudy (night)
 	"wi-day-sunny-overcast", // 30  partly cloudy (day)
 	"wi-night-clear", // 31  clear (night)
 	"wi-day-sunny", // 32  sunny
-	"night-partly-cloudy", // 33  fair (night)
+	"wi-night-partly-cloudy", // 33  fair (night)
 	"wi-day-sunny-overcast",// 34  fair (day)
 	"wi-hail", // 35  mixed rain and hail
 	"wi-hot", // 36  hot

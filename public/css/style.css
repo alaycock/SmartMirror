@@ -70,6 +70,7 @@ body {
 	font-size: 100px;
 	float: left;
 	width: 120px;
+	margin-top: 23px;
 }
 
 #today .now {
@@ -102,6 +103,10 @@ body {
 #today .todayIcon {
 	width: 140px;
 	float: left;
+}
+
+#today .temps {
+	margin-top: 10px;
 }
 
 #today .temps .hilo {

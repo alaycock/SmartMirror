@@ -56,23 +56,22 @@ function successfulWeather(res) {
 }
 
 function updateNews() {
-	$.ajax({
-	  url: newsConfig.url, //document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent(FEED_URL),
-	  dataType: 'jsonp',
-	  success: function (data) {
-			console.log(data)
-	    if (data.responseData.feed && data.responseData.feed.entries) {
+	$.get("/feed", function (data) {
 
-	      $.each(data.responseData.feed.entries, function (i, e) {
-	        console.log("------------------------");
-	        console.log("title      : " + e.title);
-	        console.log("author     : " + e.author);
-	        console.log("description: " + e.description);
-	      });
-	    }
-	  }
+		var items = $(data).find("item");
+		items.sort(function(a,b) {
+			var dateA = new Date($(a).find("pubdate").text());
+			var dateB = new Date($(b).find("pubdate").text());
+			return dateB - dateA;
+		});
+
+		for(var i = 0; i < items.length && i < 5; i++) {
+			var el = $(items[i]);
+			var title = el.find("title").text().slice(9);
+			title = title.substring(0, title.length - 3);
+			console.log(title + " " + el.find("pubdate").text());
+		}
 	});
-
 }
 
 // Constructor

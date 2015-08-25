@@ -22,37 +22,40 @@ body {
 	clear: both;
 }
 
-/* Datetime */ 
+/* Datetime */
 #datetime {
 	margin-right: 10px;
 	margin-top: 10px;
 	right: 0px;
+	width: 450px;
+}
+
+#timeContainer {
+	float:right;
 }
 
 #time {
 	font-size: 100pt;
 	float:left;
 	line-height:80%;
+	width:350px;
+	text-align: right;
 }
 
 #period {
+	float: left;
 	font-size: 50pt;
-	line-height:80%;
-}
-
-#dateContainer {
-	float:left;
 	width: 100px;
 }
 
 #date {
 	line-height:90%;
 	font-size: 12pt;
-}
-
-#year {
-	line-height:90%;
-	font-size: 30pt;
+	width: 450px;
+	float: left;
+	padding-top: 5px;
+	font-size: 30px;
+	text-align: center;
 }
 
 /* Weather */
@@ -60,6 +63,11 @@ body {
 	left: 0px;
 	margin-left: 20px;
 	margin-top: 20px;
+}
+
+#today .description {
+	font-size: 25px;
+	width:100%;
 }
 
 #today {
@@ -101,18 +109,20 @@ body {
 }
 
 #today .todayIcon {
-	width: 140px;
+	width: 130px;
 	float: left;
 }
 
 #today .temps {
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #today .temps .hilo {
-	margin-left: 30px;
 	margin-top: 7px;
 	display: inline-block;
+	width: 100%;
+	text-align: center;
 }
 
 #forecast {

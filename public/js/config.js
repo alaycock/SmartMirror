@@ -3,3 +3,7 @@ var weatherConfig = {
 	woeid: "8775",
 	unit: "c",
 };
+
+var newsConfig = {
+	url: "http://rss.cbc.ca/lineup/topstories.xml"
+};

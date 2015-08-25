@@ -1,17 +1,27 @@
 var month = [
 	"January",
 	"February",
-	"March", 
-	"April", 
-	"May", 
-	"September", 
-	"July", 
-	"August", 
-	"September", 
-	"October", 
-	"November", 
+	"March",
+	"April",
+	"May",
+	"September",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
 	"December"];
-	
+
+var week = [
+	"Sun",
+	"Mon",
+	"Tue",
+	"Wed",
+	"Thu",
+	"Fri",
+	"Sat"
+];
+
 var codeIcon = [
 	"wi-tornado", // 0  tornado
 	"wi-hurricane", // 1  tropical storm
@@ -62,4 +72,4 @@ var codeIcon = [
 	"wi-snow", // 46  snow showers
 	"wi-storm-showers", // 47  isolated thundershowers
 ];
-codeIcon[3200] = "wi-alien"; // 3200  not available 
+codeIcon[3200] = "wi-alien"; // 3200  not available

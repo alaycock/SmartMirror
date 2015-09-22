@@ -1,159 +1,165 @@
 body {
-	font-family: 'Roboto', sans-serif;
-	background-color: #000;
-	color: #FFF;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #FFF;
+  margin: 0;
 }
-
 .top {
-	position: absolute;
-	top: 0px;
+  position: absolute;
+  top: 0px;
 }
-
 .bottom {
-	position: absolute;
-	bottom: 0px;
+  position: absolute;
+  bottom: 0px;
 }
-
 .hidden {
-	display: none;
+  display: none;
 }
-
 .clear {
-	clear: both;
+  clear: both;
 }
-
 /* Datetime */
 #datetime {
-	margin-right: 10px;
-	margin-top: 10px;
-	right: 0px;
-	width: 450px;
+  margin-right: 10px;
+  margin-top: 10px;
+  right: 0px;
+  width: 450px;
 }
-
 #timeContainer {
-	float:right;
+  float: right;
 }
-
 #time {
-	font-size: 100pt;
-	float:left;
-	line-height:80%;
-	width:350px;
-	text-align: right;
+  font-size: 100pt;
+  float: left;
+  line-height: 80%;
+  width: 350px;
+  text-align: right;
 }
-
 #period {
-	float: left;
-	font-size: 50pt;
-	width: 100px;
+  float: left;
+  font-size: 50pt;
+  width: 100px;
 }
-
 #date {
-	line-height:90%;
-	font-size: 12pt;
-	width: 450px;
-	float: left;
-	padding-top: 5px;
-	font-size: 30px;
-	text-align: center;
+  line-height: 90%;
+  font-size: 12pt;
+  width: 450px;
+  float: left;
+  padding-top: 5px;
+  font-size: 30px;
+  text-align: center;
 }
-
 /* Weather */
 #weather {
-	left: 0px;
-	margin-left: 20px;
-	margin-top: 20px;
+  left: 0px;
+  margin-left: 20px;
+  margin-top: 20px;
 }
-
-#today .description {
-	font-size: 25px;
-	width:100%;
+#weather .today {
+  width: 350px;
 }
-
-#today {
-	width: 350px;
+#weather .today .description {
+  font-size: 25px;
+  width: 100%;
 }
-
-#today i {
-	font-size: 100px;
-	float: left;
-	width: 120px;
-	margin-top: 23px;
+#weather .today i {
+  font-size: 100px;
+  float: left;
+  width: 120px;
+  margin-top: 23px;
 }
-
-#today .now {
-	float: left;
-	font-size: 100px;
-	line-height: 75%;
-	margin-top: 15px;
-	font-weight: bold;
+#weather .today .now {
+  float: left;
+  font-size: 100px;
+  line-height: 75%;
+  margin-top: 15px;
+  font-weight: bold;
 }
-
-#today .now sup{
-	font-size: 40px;
-	vertical-align: top;
-	line-height: 80%;
-	font-weight: 500;
+#weather .today .now sup {
+  font-size: 40px;
+  vertical-align: top;
+  line-height: 80%;
+  font-weight: 500;
 }
-
-#today .high {
-	margin-right: 10px;
+#weather .today .high {
+  margin-right: 10px;
 }
-
-#today .low {
-	margin-left: 10px;
+#weather .today .low {
+  margin-left: 10px;
 }
-
-#today > * {
-	display: inline-block;
+#weather .today > * {
+  display: inline-block;
 }
-
-#today .todayIcon {
-	width: 130px;
-	float: left;
+#weather .today .todayIcon {
+  width: 130px;
+  float: left;
 }
-
-#today .temps {
-	margin-top: 10px;
-	margin-bottom: 10px;
+#weather .today .temps {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
-#today .temps .hilo {
-	margin-top: 7px;
-	display: inline-block;
-	width: 100%;
-	text-align: center;
+#weather .today .temps .hilo {
+  margin-top: 7px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
 }
-
-#forecast {
-	width: 500px;
-	margin-top: 15px;
+#weather .forecast {
+  width: 500px;
+  margin-top: 15px;
 }
-
-#forecast > #forecastItem {
-	display: inline-block;
-	width: 80px;
+#weather .forecast .forecastItem {
+  display: inline-block;
+  width: 80px;
 }
-
-#forecast > #forecastItem i {
-	display: inline-block;
-	width: 100%;
-	text-align: center;
-	font-size: 50px;
+#weather .forecast .forecastItem i {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
 }
-
-#forecast > #forecastItem .temps {
-	text-align: center;
-	margin-top: 15px;
+#weather .forecast .forecastItem .temps {
+  text-align: center;
+  margin-top: 15px;
 }
-
-#forecast > #forecastItem .day {
-	text-align: center;
-	margin-top: 5px;
+#weather .forecast .forecastItem .day {
+  text-align: center;
+  margin-top: 5px;
 }
-
 /* News */
 #news {
-	margin-left: auto;
-	margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 200px;
+}
+#news .newsContainer {
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#news .newsContainer .newsItem {
+  position: absolute;
+  width: 100%;
+  left: 150%;
+  margin-left: -50%;
+  bottom: 0;
+}
+#news .newsContainer .newsItem .title {
+  width: 80%;
+  font-size: 50px;
+}
+#news .newsContainer .newsItem .time {
+  width: 20%;
+  text-align: right;
+  font-size: 50px;
+}
+#news .newsContainer .newsItem:first-child {
+  left: 50%;
+}
+#news .newsContainer .newsItem div {
+  float: left;
 }

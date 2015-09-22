@@ -11,8 +11,13 @@ var serveStatic = require('serve-static');
 var request = require('request');
 var app = connect();
 
+
+// Alternates:
+// http://www.huffingtonpost.ca/feeds/index.xml
+// http://rss.cbc.ca/lineup/topstories.xml
+
 var newsConfig = {
-	url: "http://rss.cbc.ca/lineup/topstories.xml"
+	url: "http://www.huffingtonpost.ca/feeds/index.xml"
 };
 
 // Serve static files

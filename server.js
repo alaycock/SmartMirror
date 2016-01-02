@@ -10,7 +10,7 @@ var connectRoute = require('connect-route');
 var serveStatic = require('serve-static');
 var request = require('request');
 var app = connect();
-
+var port = 8080;
 
 // Alternates:
 // http://www.huffingtonpost.ca/feeds/index.xml
@@ -36,4 +36,5 @@ app.use("/feed", connectRoute(function (router) {
 	});
 }));
 
-app.listen(8080);
+app.listen(port);
+console.log("Server running on localhost:" + port)

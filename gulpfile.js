@@ -7,7 +7,6 @@ var sass = require('gulp-sass');
 var minifyCSS = require('gulp-minify-css');
 var del = require('del');
 var gcmq = require('gulp-group-css-media-queries');
-var webserver = require('gulp-webserver');
 var neat = require('node-neat').includePaths;
 
 // Not all tasks need to use streams

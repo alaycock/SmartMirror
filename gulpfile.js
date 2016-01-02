@@ -82,7 +82,7 @@ gulp.task('vendor', function() {
 gulp.task('watch', function() {
   gulp.watch('./src/templates/**/*.ejs', ['templates']);
   gulp.watch('./src/styles/**/*', ['styles']);
-  gulp.watch('./src/scripts/**/*', ['scripts']);
+  gulp.watch('./src/javascripts/**/*', ['scripts']);
   gulp.watch('./vendor/**/*', ['vendor']);
 });
 

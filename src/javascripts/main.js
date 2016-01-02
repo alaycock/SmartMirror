@@ -36,7 +36,7 @@ function updateWeather() {
 }
 
 function successfulWeather(res) {
-	$(".today i").removeClass().addClass("wi " + codeIcon[res.code]);
+	$(".today i").removeClass().addClass("wi wi-yahoo-" + res.code);
 	$(".today .description").text(res.currently);
 	$(".today .now").html(res.temp + "<sup>&deg;" + res.units.temp + "</sup>");
 	$(".today .high").html(res.high);
@@ -48,7 +48,7 @@ function successfulWeather(res) {
 		var item = res.forecast[i];
 		var forecastItem = $(".forecastItem.hidden").clone().removeClass("hidden");
 		$(".forecast").append(forecastItem);
-		forecastItem.find("i").addClass("wi " + codeIcon[item.code]);
+		forecastItem.find("i").addClass("wi wi-yahoo-" + res.code);
 		forecastItem.find(".high").text(item.high);
 		forecastItem.find(".low").text(item.low);
 		forecastItem.find(".day").text(item.day[0]);

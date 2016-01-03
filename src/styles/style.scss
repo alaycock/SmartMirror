@@ -23,12 +23,20 @@ body {
 	clear: both;
 }
 
+.page {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
 /* Datetime */
 #datetime {
-	margin-right: 10px;
-	margin-top: 10px;
+	position: relative;
+	padding-right: 10px;
+	padding-top: 10px;
 	right: 0px;
 	width: 450px;
+	float: right;
 }
 
 #timeContainer {
@@ -36,6 +44,7 @@ body {
 }
 
 #time {
+	position: relative;
 	font-size: 100pt;
 	float:left;
 	line-height:80%;
@@ -61,9 +70,10 @@ body {
 
 /* Weather */
 #weather {
+	position: relative;
 	left: 0px;
-	margin-left: 20px;
-	margin-top: 20px;
+	padding-left: 20px;
+	padding-top: 20px;
 
 	.today {
 		width: 350px;
@@ -152,6 +162,7 @@ body {
 
 /* News */
 #news {
+	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;

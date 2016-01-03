@@ -93,6 +93,25 @@ function updateNews() {
 	});
 }
 
+function keypressInit() {
+	$(document).keydown(function(e) {
+		var y = $(window).scrollTop();  //your current y position on the page
+		var height = $('.page').height();
+    switch(e.which) {
+        case 38: // up
+					$("html, body").animate({ scrollTop: y - height }, 1000);
+        break;
+
+        case 40: // down
+					$("html, body").animate({ scrollTop: y + height }, 1000);
+        break;
+
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+	});
+}
+
 // Constructor
 $(document).ready(function() {
 	setInterval(updateTime, 1000);
@@ -102,7 +121,9 @@ $(document).ready(function() {
 	updateTime();
 	updateWeather();
 	updateNews();
+	keypressInit();
 
+	// Scroll news feed
 	setInterval(function() {
 		$("#news .newsItem:first-child").animate({
 				left: '-50%'
@@ -115,4 +136,6 @@ $(document).ready(function() {
 				left: '50%'
 		}, 800);
 	}, 7000);
+
+
 });

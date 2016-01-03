@@ -18,7 +18,6 @@ gulp.task('clean', function(cb) {
 
 gulp.task('templates', function() {
   gulp.src('./src/templates/*')
-    .pipe(ejs().on('error', gutil.log))
     .pipe(gulp.dest('./public'));
 });
 
@@ -80,7 +79,7 @@ gulp.task('vendor', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./src/templates/**/*.ejs', ['templates']);
+  gulp.watch('./src/templates/**/*', ['templates']);
   gulp.watch('./src/styles/**/*', ['styles']);
   gulp.watch('./src/javascripts/**/*', ['scripts']);
   gulp.watch('./vendor/**/*', ['vendor']);

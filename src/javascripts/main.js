@@ -127,6 +127,11 @@ $(document).ready(function() {
 	updateNews();
 	keypressInit();
 
+	// Scroll to the dashboard by default
+	$(document).ready(function() {
+    $(document).scrollTop($('#dashboard').offset().top);
+	});
+
 	// Scroll news feed
 	setInterval(function() {
 		$("#news .newsItem:first-child").animate({

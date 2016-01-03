@@ -99,17 +99,21 @@ function keypressInit() {
 		var height = $('.page').height();
     switch(e.which) {
         case 38: // up
-					$("html, body").animate({ scrollTop: y - height }, 1000);
+					$("html, body").animate({ scrollTop: roundToMultiple(y - height, height) }, 1000);
         break;
 
         case 40: // down
-					$("html, body").animate({ scrollTop: y + height }, 1000);
+					$("html, body").animate({ scrollTop: roundToMultiple(y + height, height) }, 1000);
         break;
 
         default: return; // exit this handler for other keys
     }
     e.preventDefault(); // prevent the default action (scroll / move caret)
 	});
+}
+
+function roundToMultiple(n, multiple) {
+	return Math.round(n/multiple) * multiple;
 }
 
 // Constructor

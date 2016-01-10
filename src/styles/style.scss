@@ -5,6 +5,10 @@ body {
 	margin: 0;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .top {
 	position: absolute;
 	top: 0px;

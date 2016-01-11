@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 node server.js &
 sleep 5

@@ -1,7 +1,9 @@
 # SmartMirror
 This is the Node.js server which displays a page you can put in your smart mirror. The web page can be controlled with the [Hover](http://hoverlabs.co/) gesture controller.
 
-## Raspberry Pi setup
+## Installation
+
+### Raspberry Pi setup
 To replicate my setup you'll need a Raspberry Pi with [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) installed. Additionally you'll need Python 2.7, which is preinstalled with Raspbian, as well as Node.js for the web server. Install Chromium in order to view the web page which will display the mirror GUI.
 
 ### Web server setup

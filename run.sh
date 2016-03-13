@@ -1,3 +1,5 @@
+#!/bin/bash
+
 node server.js &
 sleep 5
 chromium --kiosk http://localhost:8080 &

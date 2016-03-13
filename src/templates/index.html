@@ -1,9 +1,10 @@
 <html>
 	<head>
 		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<script src="libs/javascripts/jquery.simpleWeather.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
 		<script src="js/data.js"></script>
 		<script src="js/config.js"></script>
+    <script src="js/calendar-pane.js"></script>
 		<script src="js/main.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
 		<link href='libs/styles/weather-icons.min.css' rel='stylesheet' type='text/css' />
@@ -11,8 +12,28 @@
 	</head>
 	<body>
 		<section class="page" id="calendar">
-
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
 		</section>
+
 		<section class="page" id="dashboard">
 			<div id="datetime" class="top">
 				<div id="timeContainer">

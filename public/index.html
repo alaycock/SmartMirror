@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+		<script src="js/data.js"></script>
+		<script src="js/config.js"></script>
+    <script src="js/calendar-pane.js"></script>
+		<script src="js/main.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
+		<link href='libs/styles/weather-icons.min.css' rel='stylesheet' type='text/css' />
+		<link href='css/style.css' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+		<section class="page" id="calendar">
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+      <div class="dateRow">
+        <h1><span class='day'></span><span class='temp'></span><i></i></h1>
+        <div class="events"></div>
+      </div>
+		</section>
+
+		<section class="page" id="dashboard">
+			<div id="datetime" class="top">
+				<div id="timeContainer">
+					<div id="time"></div>
+					<div id="period"></div>
+				</div>
+				<div id="date"></div>
+			</div>
+
+			<div id="weather" class="top">
+				<div class="today">
+					<span class="description"></span>
+					<div class="todayIcon">
+						<i></i>
+					</div>
+					<div class="temps">
+						<div>
+							<span class="now"></span>
+						</div>
+						<div class="hilo">
+							<span class="high"></span> | <span class="low"></span>
+						</div>
+					</div>
+					<br class="clear" />
+				</div>
+				<div class="forecast"></div>
+				<div class="forecastItem hidden">
+					<i></i>
+					<div class="temps">
+						<span class="high"></span> | <span class="low"></span>
+					</div>
+					<div class="day"></div>
+				</div>
+			</div>
+
+			<div id="news" class="bottom">
+				<div class="newsContainer"></div>
+				<div class="newsItem hidden">
+					<div class="title"></div>
+					<div class="time"></div>
+				</div>
+			</div>
+		</section>
+		<section class="page" id="headlines">
+
+		</section>
+	</body>
+</html>

@@ -2,8 +2,7 @@ var config = require('./config');
 var express = require('express')
 var session = require('express-session');
 var request = require('request');
-var google = require('googleapis');
-var calendar = google.calendar('v3');
+var calRoute = require('./routes/calendar.js');
 
 var app = express();
 var port = 8080;
@@ -31,27 +30,9 @@ app.use(session({
   saveUninitialized: true
 }));
 
-app.all('/cal', function(req, res){
+// Calendar stuff
 
-  var key = config.google_key;
-  var scopes = ['https://www.googleapis.com/auth/calendar.readonly'];
-  var jwtClient = new google.auth.JWT(key.client_email, null, key.private_key, scopes, null);
-
-  jwtClient.authorize(function(err, tokens) {
-    if (err) {
-      console.log(err);
-      return;
-    }
-
-    // Make an authorized request to list Drive files.
-    calendar.events.list(
-      {auth: jwtClient, calendarId: 'adam.laycock@gmail.com'},
-      function(err, resp) {
-        res.write(JSON.stringify(err) + JSON.stringify(resp));
-        res.end();
-    });
-  });
-});
+app.all('/cal', calRoute);
 
 app.get('/feed', function(req, res) {
 	request(newsConfig.url, function (error, response, body) {

@@ -4,7 +4,7 @@ var finishedUpdating = 0;
 
 function updateCalendar() {
   weatherConfig.success = calendarWeather;
-	$.simpleWeather(weatherConfig);
+  $.simpleWeather(weatherConfig);
 }
 
 function calendarWeather(res) {
@@ -12,7 +12,7 @@ function calendarWeather(res) {
   var rows = cal.find('.dateRow');
   var date = new Date();
 
-  for(var i = 0; i < rows.length; i++) {
+  for (var i = 0; i < rows.length; i++) {
     event_row = $(rows[i]);
 
     event_row.find('.day').text(week[date.getDay()]);
@@ -28,12 +28,12 @@ function updateEvents() {
   finishedUpdating = 0;
 
   var events = $('#calendar .dateRow .events');
-  for(var i = 0; i < events.length; i++) {
+  for (var i = 0; i < events.length; i++) {
     console.log('emptying')
     $(events[i]).empty();
   }
 
-  for (var k in calendarIds){
+  for (var k in calendarIds) {
     if (calendarIds.hasOwnProperty(k)) {
       $.get("/cal?id=" + calendarIds[k], addEvents(k));
     }
@@ -44,22 +44,22 @@ function addEvents(id) {
   return function(data) {
     calendarEvents[id] = data;
 
-    if(++finishedUpdating === Object.keys(calendarIds).length)
+    if (++finishedUpdating === Object.keys(calendarIds).length)
       drawEvents();
   }
 }
 
 function drawEvents() {
   var allEvents = [];
-  for (var k in calendarEvents){
+  for (var k in calendarEvents) {
     if (calendarEvents.hasOwnProperty(k)) {
-      for(var i = 0; i < calendarEvents[k].length; i++) {
+      for (var i = 0; i < calendarEvents[k].length; i++) {
         calendarEvents[k][i].calendar = k;
       }
       Array.prototype.push.apply(allEvents, calendarEvents[k]);
     }
   }
-  allEvents.sort(function(a,b) {
+  allEvents.sort(function(a, b) {
     b.start.dateTime = b.start.dateTime || b.start.date;
     a.start.dateTime = a.start.dateTime || a.start.date;
     return new Date(a.start.dateTime) - new Date(b.start.dateTime);
@@ -75,9 +75,9 @@ function drawEvents() {
   endDate.setDate(endDate.getDate() + 5);
 
   var eventIndex = 0;
-  while(eventIndex < allEvents.length && dayCounter < endDate) {
+  while (eventIndex < allEvents.length && dayCounter < endDate) {
     var event = allEvents[eventIndex];
-    if(dayCounter.getDate() !== (new Date(event.start.dateTime)).getDate()) {
+    if (dayCounter.getDate() !== (new Date(event.start.dateTime)).getDate()) {
       dayCounter.setDate(dayCounter.getDate() + 1);
       dayIndex++;
     } else {
@@ -89,8 +89,8 @@ function drawEvents() {
 }
 
 $(document).ready(function() {
-	// setInterval(updateCalendar, 60000);
+  // setInterval(updateCalendar, 60000);
   updateEvents();
 
-	updateCalendar();
+  updateCalendar();
 });
